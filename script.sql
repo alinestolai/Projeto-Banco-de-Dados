@@ -116,7 +116,7 @@ CREATE TABLE department_summary (
     total_salary FLOAT
 );
 
-/*Como são muitos inserts, colocamos apenas alguns dos inserts de cada tabela para mostrar como fizemos.*/
+/*Como são muitos inserts, colocamos apenas alguns de cada tabela para mostrar como fizemos.*/
 
 -- insert para department
 INSERT INTO department (dept_name, building, budget) VALUES ('Civil Eng.', 'Chandler', 255041.46);
