@@ -116,6 +116,36 @@ CREATE TABLE department_summary (
     total_salary FLOAT
 );
 
+-- criando uma tabela para a primeira consulta
+CREATE TABLE query_um (
+	ID TEXT,
+	name TEXT,
+	title TEXT,
+	course_id TEXT,
+	sec_id TEXT,
+	s_ID TEXT,
+	i_ID TEXT,
+	PRIMARY KEY(ID, s_ID, i_ID)
+);
+
+-- criando uma tabela para a segunda consulta
+CREATE TABLE query_dois (
+	name TEXT,
+	room_number TEXT,
+	building TEXT,
+	dept_name TEXT,
+	PRIMARY KEY (room_number, building, dept_name)
+);
+
+-- criando tabela para a terceira consulta
+CREATE TABLE query_tres (
+	ID TEXT PRIMARY KEY,
+	dept_name TEXT,
+	budget FLOAT,
+	salary FLOAT
+);
+	
+	
 /*Como são muitos inserts, colocamos apenas alguns de cada tabela para mostrar como fizemos.*/
 
 --insert para classroom
@@ -163,6 +193,7 @@ INSERT INTO advisor (s_ID, i_ID) VALUES ('24746', '19368');
 INSERT INTO advisor (s_ID, i_ID) VALUES ('79352', '95030');
 INSERT INTO advisor (s_ID, i_ID) VALUES ('76672', '22591');
 
+-- insert para coluna da primeira consulta
 
 
 
