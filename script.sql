@@ -134,13 +134,13 @@ CREATE TABLE query_dois (
 	room_number TEXT,
 	building TEXT,
 	dept_name TEXT,
-	PRIMARY KEY (room_number, building, dept_name)
+	PRIMARY KEY (room_number, building, name)
 );
 
 -- criando tabela para a terceira consulta
 CREATE TABLE query_tres (
-	ID TEXT PRIMARY KEY,
-	dept_name TEXT,
+	dept_name TEXT PRIMARY KEY,
+	ID TEXT,
 	budget FLOAT,
 	salary FLOAT
 );
@@ -193,11 +193,56 @@ INSERT INTO advisor (s_ID, i_ID) VALUES ('24746', '19368');
 INSERT INTO advisor (s_ID, i_ID) VALUES ('79352', '95030');
 INSERT INTO advisor (s_ID, i_ID) VALUES ('76672', '22591');
 
--- insert para coluna da primeira consulta
+-- insert para tabela da primeira consulta
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('1', 'Aoi', 'Intro. to Digital Systems', '10', 'Kim', '11', '21');
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('2', 'Bourikas', 'Intro. to Digital Systems', '10', 'Kim', '11', '21');
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('3', 'Brown', 'Image Processing', '90', 'Katz', '12', '22');
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('3', 'Brown', 'Intro. to Computer Science', '70', 'Katz', '16', '22');
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('4', 'Levy', 'Physical Principles', '10', 'Einstein', '13', '23');
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('5', 'Peltier', 'Physical Principles', '10', 'Einstein', '13', '23');
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('6', 'Shankar', 'Database Syatem Concepts', '90', 'Srinivasan', '14', '24');
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('6', 'Shankar', 'Intro. to Digital Systems', '70', 'Srinivasan', '11', '24');
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('6', 'Shankar', 'Robotics', '10', 'Srinivasan', '15', '24');
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('7', 'Tanaka', 'Genetics', '10', 'Crick', '17', '25');
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('7', 'Tanaka', 'Intro. to Biology', '90', 'Crick', '18', '25');
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('8', 'Zhang', 'Image Processing', '70', 'Katz', '19', '22');
+INSERT INTO query_um (ID, name, title, course_id, sec_id, s_ID, i_ID) VALUES ('8', 'Zhang', 'Intro. to Computer Science', '70', 'Katz', '16', '22');
+
+-- insert para tabela da segunda consulta
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Crick', '120', 'Watson', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Crick', '100', 'Watson', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Brandt', '3128', 'Taylor', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Katz', '3128', 'Taylor', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Srinivasan', '3128', 'Taylor', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Kim', '3128', 'Taylor', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Singh', '514', 'Painter', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Wu', '514', 'Painter', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Califieri', '514', 'Painter', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('El Said', '514', 'Painter', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Mozart', '101', 'Packard', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Gold', '120', 'Watson', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Eintein', '120', 'Watson', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Gold', '100', 'Watson', '10');
+INSERT INTO query_dois (name, room_number, building, dept_name) VALUES ('Eintein', '100', 'Watson', '10');
 
 
+-- insert para a tabela da terceira consulta
+INSERT INTO query_tres (ID, dept_name, budget, salary) VALUES ('1', 'Biology', 90000.00, 72000.00);
+INSERT INTO query_tres (ID, dept_name, budget, salary) VALUES ('4', 'Comp.Sci.', 100000.00, 77333.33);
+INSERT INTO query_tres (ID, dept_name, budget, salary) VALUES ('2', 'Elec.Eng', 85000.00, 80000.00);
+INSERT INTO query_tres (ID, dept_name, budget, salary) VALUES ('1', 'Finance', 120000.00, 85000.00);
+INSERT INTO query_tres (ID, dept_name, budget, salary) VALUES ('1', 'History', 50000.00, 61000.00);
+INSERT INTO query_tres (ID, dept_name, budget, salary) VALUES ('1', 'Music', 80000.00, 40000.00);
+INSERT INTO query_tres (ID, dept_name, budget, salary) VALUES ('3', 'Physics', 70000.00, 91000.00);
 
+-- consulta 1
+SELECT name, sec_id, title FROM query_um;
 
+-- consulta 2
+SELECT name, room_number, building FROM query_dois;
+
+-- consulta 3
+SELECT dept_name, budget, ID, salary from query_tres;
 
 
 
