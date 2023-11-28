@@ -16,7 +16,7 @@ USE university;
 CREATE TABLE classroom (
     building TEXT,
     room_number TEXT,
-    capacity INT,
+    capacity TEXT,
     PRIMARY KEY (building, room_number)
 );
 
@@ -117,6 +117,11 @@ CREATE TABLE department_summary (
 );
 
 /*Como são muitos inserts, colocamos apenas alguns de cada tabela para mostrar como fizemos.*/
+
+--insert para classroom
+INSERT INTO classroom(building, room_number, capacity) VALUES ('Painter', '514', '10');
+INSERT INTO classroom(building, room_number, capacity) VALUES ('Taylor', '3128', '70');
+INSERT INTO classroom(building, room_number, capacity) VALUES ('Watson', '100', '30');
 
 -- insert para department
 INSERT INTO department (dept_name, building, budget) VALUES ('Civil Eng.', 'Chandler', 255041.46);
